@@ -8,7 +8,9 @@ namespace mini_project__1_shakespeare
     {
 
         public List<string> _list = new List<string>();
-
+        public string _line;
+        
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -22,13 +24,13 @@ namespace mini_project__1_shakespeare
             {
                 using (StreamReader sr = new StreamReader("shakespeare.txt"))
                 {
-                    string line;
-
-                    while ((line = sr.ReadLine()) != null)
+                   
+                    string[] split = _line.Split();
+                    while ((_line = sr.ReadLine()) != null)
                     {
-
-                        _list.Add(line);
-                        Console.WriteLine(line);
+                        
+                        _list.Add(_line);
+                        Console.WriteLine(_line);
                     }
 
                 }
