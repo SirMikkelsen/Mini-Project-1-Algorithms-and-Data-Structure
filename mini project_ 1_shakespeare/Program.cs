@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace mini_project__1_shakespeare
 {
     class Program
     {
+        // list = str.ToList();
 
-       public static List<string> _list = new List<string>();
+       public static string[] _list;
+       //public static List<string> _list = new List<string>();
        public static string _line;
        public static SelectionSort<string> _mySort = new SelectionSort<string>();
 
@@ -30,7 +34,7 @@ namespace mini_project__1_shakespeare
                     Console.WriteLine("Do Merge");
                     break;
                 case "4":
-                    String[] result = _mySort.Sort(_list);
+                    string[] result = _mySort.Sort(_list);
                     for (int i = 0; i < result.Length; i++)
                     {
                         Console.WriteLine(result[i]);
