@@ -8,10 +8,10 @@ namespace mini_project__1_shakespeare
 {
     class Program
     {
-        // list = str.ToList();
+        
 
-       public static string[] _list;
-       //public static List<string> _list = new List<string>();
+       //public static string[] _list;
+       public static List<string> _list = new List<string>();
        public static string _line;
        public static SelectionSort<string> _mySort = new SelectionSort<string>();
 
@@ -81,6 +81,7 @@ namespace mini_project__1_shakespeare
                             if (cword != null && word != "" && word !=" ")
                             {
                                     _list.Add(cword);
+                                  //_list[] = cword 
 
                             }
 
