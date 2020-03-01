@@ -8,7 +8,6 @@ namespace mini_project__1_shakespeare
 {
     class Program
     {
-        
 
        //public static string[] _list;
        public static List<string> _list = new List<string>();
@@ -50,7 +49,6 @@ namespace mini_project__1_shakespeare
             }
 
             Readfile();
-
             Console.ReadKey();
         }
 
@@ -66,11 +64,8 @@ namespace mini_project__1_shakespeare
 
                     while ((_line = sr.ReadLine()) != null)
                     {
-                        
                         string[] split = _line.Split(" ");
-
                         int i = 0;
-
 
                         char[] charsToTrim = { ',', '.', ';', ':' };
 
@@ -90,7 +85,6 @@ namespace mini_project__1_shakespeare
                         }
                       
                     }
-
                 }
 
             }
