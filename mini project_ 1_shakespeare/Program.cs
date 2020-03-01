@@ -7,29 +7,35 @@ namespace mini_project__1_shakespeare
     class Program
     {
 
-        public List<string> _list = new List<string>();
-        public string _line;
+        public static List<string> _list = new List<string>();
+        public static string _line;
         
         
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Readfile();
+
+            Console.ReadKey();
         }
 
 
 
-        public void Readfile()
+        public static void Readfile()
         {
             try
             {
+                Console.WriteLine("TEST");
                 using (StreamReader sr = new StreamReader("shakespeare.txt"))
                 {
-                   
-                  
+
                     while ((_line = sr.ReadLine()) != null)
                     {
-
+                        
                         string[] split = _line.Split(" ");
+
+                      
 
                         int i = 0;
 
@@ -37,13 +43,13 @@ namespace mini_project__1_shakespeare
 
                         char[] charsToTrim = { ',', '.', ';', ':' };
 
-                        while (word = split[i].Trim(charsToTrim)) 
-                        {
-                            i++;
+                        //while (word = split[i].Trim(charsToTrim)) 
+                        //{
+                        //    i++;
 
-                        }
-                        _list.Add(_line);
-                        Console.WriteLine(_line);
+                        //}
+                        //_list.Add(_line);
+                        //Console.WriteLine(_line);
                     }
 
                 }
