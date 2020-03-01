@@ -13,7 +13,32 @@ namespace mini_project__1_shakespeare
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
+
+            string selction = Console.ReadLine();
+
+            switch (selction)
+            {
+                case "1":
+                    Console.WriteLine("Do heap");
+                    break;
+                case "2":
+                    Console.WriteLine("Do Insertion");
+                    break;
+                case "3":
+                    Console.WriteLine("Do Merge");
+                    break;
+                case "4":
+                    Console.WriteLine("Do Selection");
+                    break;
+                case "5":
+                    Console.WriteLine("Do trie");
+                    break;
+                default:
+                    Console.WriteLine("out of range");
+                    break;
+                    
+            }
 
             Readfile();
 
@@ -45,12 +70,17 @@ namespace mini_project__1_shakespeare
                         foreach (string word in split)
                         {
                             string cword = word.Trim(charsToTrim);
-                            Console.WriteLine(cword);
+                           
+                            if (cword != null && word != "" && word !=" ")
+                            {
+                                    _list.Add(cword);
+
+                            }
+
                             i++;
 
                         }
-                        _list.Add(_line);
-                        Console.WriteLine(_line);
+                      
                     }
 
                 }
