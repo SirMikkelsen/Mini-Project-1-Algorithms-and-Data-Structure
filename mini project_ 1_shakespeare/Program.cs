@@ -8,13 +8,15 @@ namespace mini_project__1_shakespeare
 {
     class Program
     {
-
+       // public static ArrayList _list;
         public static string[] _list;
-        //public static List<string> _list = new List<string>();
+       //public static List<string> _list = new List<string>();
         public static string _line;
         public static string _srline;
         public static SelectionSort<string> _mySort = new SelectionSort<string>();
-        // public static string[] _array = _list.ToArray();
+        
+        
+       // public static string[] _array = _list.ToArray();
         public static int counter = 0;
 
 
@@ -24,6 +26,9 @@ namespace mini_project__1_shakespeare
             Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
 
             string selction = Console.ReadLine();
+
+
+            Readfile();
 
             switch (selction)
             {
@@ -37,13 +42,14 @@ namespace mini_project__1_shakespeare
                     Console.WriteLine("Do Merge");
                     break;
                 case "4":
-                    string[] result = _mySort.Sort(_list);
-                    Console.WriteLine(result.Length);
-                    for (int i = 0; i < result.Length; i++)
-                    {
-                        Console.WriteLine("Test2");
-                        Console.WriteLine(result[i]);
-                    }
+                    Console.WriteLine(_list[10]);
+                    //string[] result = _mySort.Sort(_list);
+                    //Console.WriteLine(result.Length);
+                    //for (int i = 0; i < result.Length; i++)
+                    //{
+                    //    Console.WriteLine("Test2");
+                    //    Console.WriteLine(result[i]);
+                    //}
                     Console.WriteLine("Tet3");
                     break;
                 case "5":
@@ -55,7 +61,6 @@ namespace mini_project__1_shakespeare
 
             }
 
-            Readfile();
             Console.ReadKey();
         }
 
@@ -66,15 +71,15 @@ namespace mini_project__1_shakespeare
             {
 
                 using (StreamReader srcount = new StreamReader("../../../../shakespeare.txt"))
-                { 
-                    while((_srline = srcount.ReadLine()  ) != null)
+                {
+                    while ((_srline = srcount.ReadLine()) != null)
                     {
                         string[] srsplit = _srline.Split(" ");
                         int i = 0;
 
                         char[] charsToTrim = { ',', '.', ';', ':' };
 
-                        foreach ( string srword in srsplit)
+                        foreach (string srword in srsplit)
                         {
                             string srcword = srword.Trim(charsToTrim);
 
@@ -90,9 +95,9 @@ namespace mini_project__1_shakespeare
 
                     }
 
-                    
+
                 }
-                Array.Resize(ref _list,counter);
+                Array.Resize(ref _list, counter);
                 Console.WriteLine(counter);
 
                 using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
@@ -113,7 +118,7 @@ namespace mini_project__1_shakespeare
                             if (cword != null && word != "" && word != " ")
                             {
                                 // _list.Add(cword);
-                                _list[i] = cword; 
+                               _list[i] = cword; 
 
                             }
 
