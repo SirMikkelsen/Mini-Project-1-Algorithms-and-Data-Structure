@@ -13,10 +13,14 @@ namespace mini_project__1_shakespeare
        public static List<string> _list = new List<string>();
        public static string _line;
        public static SelectionSort<string> _mySort = new SelectionSort<string>();
+      
 
 
         static void Main(string[] args)
         {
+
+            String[] array = _list.ToArray(); 
+            
             Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
 
             string selction = Console.ReadLine();
@@ -33,7 +37,7 @@ namespace mini_project__1_shakespeare
                     Console.WriteLine("Do Merge");
                     break;
                 case "4":
-                    string[] result = _mySort.Sort(_list);
+                    string[] result = _mySort.Sort(array);
                     for (int i = 0; i < result.Length; i++)
                     {
                         Console.WriteLine(result[i]);
