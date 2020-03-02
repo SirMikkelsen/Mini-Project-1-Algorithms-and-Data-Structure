@@ -42,7 +42,12 @@ namespace mini_project__1_shakespeare
                     Console.WriteLine("Do Merge");
                     break;
                 case "4":
-                    Console.WriteLine(_list[10]);
+                  
+
+                    for (int i = 0; i <= 11; i++) 
+                    {
+                        Console.WriteLine(_list[i]);
+                    }
                     //string[] result = _mySort.Sort(_list);
                     //Console.WriteLine(result.Length);
                     //for (int i = 0; i < result.Length; i++)
