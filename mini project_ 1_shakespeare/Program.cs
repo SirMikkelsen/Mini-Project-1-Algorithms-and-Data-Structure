@@ -8,27 +8,25 @@ namespace mini_project__1_shakespeare
 {
     class Program
     {
-       // public static ArrayList _list;
+        // public static ArrayList _list;
         public static string[] _list;
-       //public static List<string> _list = new List<string>();
+        //public static List<string> _list = new List<string>();
         public static string _line;
         public static string _srline;
         public static SelectionSort<string> _mySort = new SelectionSort<string>();
-        
-        
-       // public static string[] _array = _list.ToArray();
+        // public static string[] _array = _list.ToArray();
         public static int counter = 0;
 
 
         static void Main(string[] args)
         {
 
+            Readfile();
             Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
 
             string selction = Console.ReadLine();
 
-
-            Readfile();
+         
 
             switch (selction)
             {
@@ -42,9 +40,7 @@ namespace mini_project__1_shakespeare
                     Console.WriteLine("Do Merge");
                     break;
                 case "4":
-                  
-
-                    for (int i = 0; i <= 11; i++) 
+                    for (int i = 0; i <= 11; i++)
                     {
                         Console.WriteLine(_list[i]);
                     }
@@ -88,7 +84,6 @@ namespace mini_project__1_shakespeare
                         {
                             string srcword = srword.Trim(charsToTrim);
 
-
                             if (srcword != null && srcword != "" && srcword != " ")
                             {
 
@@ -123,7 +118,7 @@ namespace mini_project__1_shakespeare
                             if (cword != null && word != "" && word != " ")
                             {
                                 // _list.Add(cword);
-                               _list[i] = cword; 
+                                _list[i] = cword;
 
                             }
 
