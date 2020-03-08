@@ -6,55 +6,85 @@ using System.Linq;
 
 namespace mini_project__1_shakespeare
 {
-    class Program
+    public class Program
     {
-        // public static ArrayList _list;
-        public static string[] _list;
-        //public static List<string> _list = new List<string>();
+        public static HeapSort<string> _heapSort = new HeapSort<string>();
+        public static InsertionSort<string> _insertionSort = new InsertionSort<string>();
+        public static MergeSort<string> _mergeSort = new MergeSort<string>();
+        public static SelectionSort<string> _selectionSort = new SelectionSort<string>();
+        public static TrieSort<string> _trieSort = new TrieSort<string>();
+
+        public static List<string> _list = new List<string>();
         public static string _line;
-        public static string _srline;
-        public static SelectionSort<string> _mySort = new SelectionSort<string>();
-        // public static string[] _array = _list.ToArray();
         public static int counter = 0;
+        // public static string _srline;
 
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
-            Readfile();
             Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
-
             string selction = Console.ReadLine();
-
-         
+            Readfile();
 
             switch (selction)
             {
                 case "1":
-                    Console.WriteLine("Do heap");
+                    string[] _array = _list.ToArray();
+                    string[] result1 = _heapSort.Sort(_array);
+
+                    for (int i = 0; i < result1.Length; i++)
+                    {
+                        Console.WriteLine(result1[i]);
+                    }
                     break;
                 case "2":
-                    Console.WriteLine("Do Insertion");
+
+                    // Does not print words out in console
+
+                    string[] _array2 = _list.ToArray();
+                    string[] result2 = _insertionSort.Sort(_array2);
+
+                    for (int i = 0; i < result2.Length; i++)
+                    {
+                        Console.WriteLine(result2[i]);
+                    }
                     break;
+
                 case "3":
-                    Console.WriteLine("Do Merge");
+
+                    // Does not print words out in console
+
+                    string[] _array3 = _list.ToArray();
+                    string[] result3 = _selectionSort.Sort(_array3);
+
+                    for (int i = 0; i < result3.Length; i++)
+                    {
+                        Console.WriteLine(result3[3]);
+                    }
+
                     break;
                 case "4":
-                    for (int i = 0; i <= 11; i++)
+
+                    // Does not print words out in console
+                    string[] _array4 = _list.ToArray();
+                    string[] result4 = _selectionSort.Sort(_array4);
+
+                    for (int i = 0; i < result4.Length; i++)
                     {
-                        Console.WriteLine(_list[i]);
+
+                        Console.WriteLine(result4[i] + ' ');
                     }
-                    //string[] result = _mySort.Sort(_list);
-                    //Console.WriteLine(result.Length);
-                    //for (int i = 0; i < result.Length; i++)
-                    //{
-                    //    Console.WriteLine("Test2");
-                    //    Console.WriteLine(result[i]);
-                    //}
-                    Console.WriteLine("Tet3");
                     break;
                 case "5":
-                    Console.WriteLine("Do trie");
+
+                    // prints words out in console but not in alphabetical order
+                    string[] _array5 = _list.ToArray();
+                    string[] result5 = _trieSort.Sort(_array5);
+                    for (int i = 0; i < result5.Length; i++)
+                    {
+                        Console.WriteLine(result5[i]);
+                    }
+
                     break;
                 default:
                     Console.WriteLine("out of range");
@@ -70,39 +100,8 @@ namespace mini_project__1_shakespeare
         {
             try
             {
-
-                using (StreamReader srcount = new StreamReader("../../../../shakespeare.txt"))
-                {
-                    while ((_srline = srcount.ReadLine()) != null)
-                    {
-                        string[] srsplit = _srline.Split(" ");
-                        int i = 0;
-
-                        char[] charsToTrim = { ',', '.', ';', ':' };
-
-                        foreach (string srword in srsplit)
-                        {
-                            string srcword = srword.Trim(charsToTrim);
-
-                            if (srcword != null && srcword != "" && srcword != " ")
-                            {
-
-                                counter++;
-                            }
-
-                            i++;
-                        }
-
-                    }
-
-
-                }
-                Array.Resize(ref _list, counter);
-                Console.WriteLine(counter);
-
                 using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
                 {
-
 
                     while ((_line = sr.ReadLine()) != null)
                     {
@@ -117,8 +116,7 @@ namespace mini_project__1_shakespeare
 
                             if (cword != null && word != "" && word != " ")
                             {
-                                // _list.Add(cword);
-                                _list[i] = cword;
+                                _list.Add(cword);
 
                             }
 

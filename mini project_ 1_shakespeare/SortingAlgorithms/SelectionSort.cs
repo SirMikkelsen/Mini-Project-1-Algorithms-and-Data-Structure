@@ -4,6 +4,10 @@ using System.Text;
 
 namespace mini_project__1_shakespeare
 {
+    /// <summary>
+    ///  Algorithm founded on the net
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class SelectionSort<T> where T : IComparable
     {
         public T[] Sort(T[] list)
@@ -28,5 +32,6 @@ namespace mini_project__1_shakespeare
 
             return list;
         }
+
     }
 }
