@@ -54,14 +54,14 @@ namespace mini_project__1_shakespeare
 
                 case "3":
 
-                    // Does not print words out in console
+                    // is working
 
                     string[] _array3 = _list.ToArray();
-                    string[] result3 = _selectionSort.Sort(_array3);
+                    string[] result3 = _mergeSort.Sort(_array3);
 
                     for (int i = 0; i < result3.Length; i++)
                     {
-                        Console.WriteLine(result3[3]);
+                        Console.WriteLine(result3[i]);
                     }
 
                     break;
@@ -74,7 +74,7 @@ namespace mini_project__1_shakespeare
                     for (int i = 0; i < result4.Length; i++)
                     {
 
-                        Console.WriteLine(result4[i] + ' ');
+                        Console.WriteLine(result4[i]);
                     }
                     break;
                 case "5":
