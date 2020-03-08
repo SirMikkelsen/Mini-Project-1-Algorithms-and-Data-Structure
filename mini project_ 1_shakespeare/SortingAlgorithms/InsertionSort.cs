@@ -25,7 +25,6 @@ namespace mini_project__1_shakespeare
                     array[j + 1] = array[j];
                     j--;
 //                    Console.WriteLine(array[i]);              
-
                 }
 
                 array[j + 1] = value;

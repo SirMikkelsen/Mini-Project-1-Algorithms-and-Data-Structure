@@ -83,7 +83,9 @@ namespace mini_project__1_shakespeare
                     string[] _array5 = _list.ToArray();
                     string[] result5 = _trieSort.Sort(_array5);
                     for (int i = 0; i < result5.Length; i++)
+
                     {
+                        _trieSort.insert(_array5[i] ,i);
                         Console.WriteLine(result5[i]);
                     }
 
