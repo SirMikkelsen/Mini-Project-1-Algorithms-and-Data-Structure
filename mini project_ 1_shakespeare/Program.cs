@@ -29,6 +29,8 @@ namespace mini_project__1_shakespeare
             switch (selction)
             {
                 case "1":
+
+                    // is working
                     string[] _array = _list.ToArray();
                     string[] result1 = _heapSort.Sort(_array);
 
