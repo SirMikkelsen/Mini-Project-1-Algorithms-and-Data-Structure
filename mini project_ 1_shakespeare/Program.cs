@@ -42,15 +42,15 @@ namespace mini_project__1_shakespeare
 
                     // Does not print words out in console
                     string[] _array2 = _list.ToArray();
-                    string[] result = _insertionSort.Sort(_array2);
+                    string[] result2 = _insertionSort.Sort(_array2);
+                   
 
-                 
-
-                    for (int i = 0; i < result.Length; i++)
+                    for (int i = 0; i < result2.Length; i++)
                     {
-                        Console.WriteLine(result[3933]);
-                        Console.WriteLine(result[i]);
-                    }
+                        
+                        Console.Write(result2[i]);
+           
+                    } 
 
 
                     break;
@@ -107,7 +107,7 @@ namespace mini_project__1_shakespeare
         {
             try
             {
-                using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
+                using (StreamReader sr = new StreamReader("../../../../text.txt"))
                 {
 
                     while ((_line = sr.ReadLine()) != null)
