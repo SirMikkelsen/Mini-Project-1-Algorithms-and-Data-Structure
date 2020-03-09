@@ -48,7 +48,7 @@ namespace mini_project__1_shakespeare
                     for (int i = 0; i < result2.Length; i++)
                     {
                         
-                        Console.Write(result2[i]);
+                        Console.WriteLine(result2[i]);
            
                     } 
 
@@ -87,13 +87,28 @@ namespace mini_project__1_shakespeare
                     {
                         _trieSort.insert(_array5[i], i);
                     }
-                    string[] result5 = _trieSort.Sort(_array5);
-                    for (int i = 0; i < result5.Length; i++)
 
+
+                    foreach(var elements in _array5)
                     {
-                      
-                        Console.WriteLine(result5[i]);
+                        Console.WriteLine(elements);
                     }
+                 
+
+                    string[] result5 = _trieSort.Sort(_array5);
+
+                     foreach(var elements in _array5)
+                    {
+                        Console.WriteLine(elements);
+                    }
+                 
+                  
+                    //for (int i = 0; i < result5.Length; i++)
+
+                    //{
+                      
+                    //    Console.WriteLine(result5[i]);
+                    //}
 
                     break;
                 default:
