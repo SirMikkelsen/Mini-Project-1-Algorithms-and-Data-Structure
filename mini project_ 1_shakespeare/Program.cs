@@ -43,7 +43,7 @@ namespace mini_project__1_shakespeare
                     // Does not print words out in console
 
                     string[] _array2 = _list.ToArray();
-                    string[] result2 = _insertionSort.Sort(_array2);
+                    string[] result2 = _insertionSort.sort(_array2);
 
                     for (int i = 0; i < result2.Length; i++)
                     {

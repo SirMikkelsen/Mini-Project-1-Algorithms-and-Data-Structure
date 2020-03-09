@@ -35,7 +35,7 @@ namespace mini_project__1_shakespeare
         //        return array;
         //    }
 
-        public T sort(T[] array)
+        public T[] sort(T[] array)
         { // Sort a[] into increasing order.
             int N = array.Length;
             for (int i = 1; i < N; i++)
