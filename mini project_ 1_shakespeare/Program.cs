@@ -83,9 +83,12 @@ namespace mini_project__1_shakespeare
                     // prints words out in console but not in alphabetical order
                     string[] _array5 = _list.ToArray();
 
+                    Console.WriteLine("arraycreatet");
+
                     for (int i = 0; i < _array5.Length; i++)
                     {
                                    _trieSort.insert(_array5[i], i);
+                                   Console.WriteLine(_array5[i]);
                     }
 
 
@@ -95,7 +98,7 @@ namespace mini_project__1_shakespeare
                     }
 
 
-                    string[] result5 = _trieSort.traversePreorder(_array5);
+                 //   string[] result5 = _trieSort.traversePreorder(_array5);
 
                     //foreach (var elements in _array5)
                     //{
@@ -124,7 +127,7 @@ namespace mini_project__1_shakespeare
         {
             try
             {
-                using (StreamReader sr = new StreamReader("../../../../test.txt"))
+                using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
                 {
 
                     while ((_line = sr.ReadLine()) != null)

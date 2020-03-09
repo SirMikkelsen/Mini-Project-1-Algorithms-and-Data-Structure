@@ -36,29 +36,26 @@ namespace mini_project__1_shakespeare
 
             Node currentNode = rootNode;
 
-            Console.WriteLine(currentNode);
-
-            currentNode.addChild('t');
-            Console.WriteLine(currentNode.getChild('t'));
 
 
-            //for (int i = 0; i < key.Length; i++)
-            //{
-            //    char keyChar = key[i];
 
-            //    if (currentNode.getChild(keyChar).Equals(null))
-            //    {
+            for (int i = 0; i < key.Length; i++)
+            {
+                char keychar = key[i];
 
-            //    }
+                if (currentNode.getChild(keychar)== null);
+                {
+                    Console.WriteLine("huarray");
+                }
 
-            //   // go to next node
-            //      currentNode = currentNode.getChild(keyChar);
-            //}
+                // go to next node
+                currentNode = currentNode.getChild(keychar);
+            }
 
-            //Mark leaf(end of string)
-            //     and store index of 'str'
-            // in index[]
-            //currentNode.addIndex(index);
+           // mark leaf(end of string)
+             //    and store index of 'str'
+        //     in index[]
+            currentNode.addIndex(index);
         }
 
         public T[] traversePreorder(T[] array)
@@ -95,7 +92,7 @@ namespace mini_project__1_shakespeare
         public class Node
         {
 
-            public Node[] children;
+            public static Node[] children;
             public List<int> indices;
 
             public Node()
@@ -135,8 +132,6 @@ namespace mini_project__1_shakespeare
                 indices.Add(index);
             }
         }
-
-
     }
 
 }
