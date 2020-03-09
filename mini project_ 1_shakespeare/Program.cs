@@ -16,7 +16,7 @@ namespace mini_project__1_shakespeare
 
         public static List<string> _list = new List<string>();
         public static string _line;
-      
+
 
         public static void Main(string[] args)
         {
@@ -41,15 +41,17 @@ namespace mini_project__1_shakespeare
                 case "2":
 
                     // Does not print words out in console
-
                     string[] _array2 = _list.ToArray();
-                    string[] result2 = _insertionSort.Sort(_array2);
-                  
+                    string[] result = _insertionSort.Sort(_array2);
 
-                    for (int i = 0; i < result2.Length; i++)
+                 
+
+                    for (int i = 0; i < result.Length; i++)
                     {
-                        Console.WriteLine(result2[i]);
+                        Console.WriteLine(result[3933]);
+                        Console.WriteLine(result[i]);
                     }
+
 
                     break;
 
@@ -86,7 +88,7 @@ namespace mini_project__1_shakespeare
                     for (int i = 0; i < result5.Length; i++)
 
                     {
-                        _trieSort.insert(_array5[i] ,i);
+                        _trieSort.insert(_array5[i], i);
                         Console.WriteLine(result5[i]);
                     }
 

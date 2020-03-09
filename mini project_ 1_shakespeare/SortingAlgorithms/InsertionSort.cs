@@ -39,20 +39,21 @@ namespace mini_project__1_shakespeare
        
         { // Sort a[] into increasing order.
             int N = array.Length;
+            
             for (int i = 1; i < N; i++)
             { // Insert a[i] among a[i-1], a[i-2], a[i-3]... ..
-                for (int j = i; j > 0 && less(array[j], array[j - 1]); j--)
-                    exch(array, j, j - 1);
+                for (int j = i; j > 0 && Less(array[j], array[j - 1]); j--)
+                    Exch(array, j, j - 1);
             }
 
             return array;
         }
         
-        public static bool less(T v, T w)
+        public static bool Less(T v, T w)
         { return v.CompareTo(w) < 0; }
 
 
-        public static void exch(T[] a, int i, int j)
+        public static void Exch(T[] a, int i, int j)
         { T t = a[i]; a[i] = a[j]; a[j] = t; }
 
     }
