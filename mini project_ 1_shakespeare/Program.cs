@@ -52,13 +52,11 @@ namespace mini_project__1_shakespeare
            
                     } 
 
-
                     break;
 
                 case "3":
 
                     // is working
-
                     string[] _array3 = _list.ToArray();
                     string[] result3 = _mergeSort.Sort(_array3);
 
@@ -84,11 +82,16 @@ namespace mini_project__1_shakespeare
 
                     // prints words out in console but not in alphabetical order
                     string[] _array5 = _list.ToArray();
+
+                    for(int i = 0; i < _array5.Length; i++)
+                    {
+                        _trieSort.insert(_array5[i], i);
+                    }
                     string[] result5 = _trieSort.Sort(_array5);
                     for (int i = 0; i < result5.Length; i++)
 
                     {
-                        _trieSort.insert(_array5[i], i);
+                      
                         Console.WriteLine(result5[i]);
                     }
 
@@ -101,7 +104,6 @@ namespace mini_project__1_shakespeare
 
             Console.ReadKey();
         }
-
 
         public static void Readfile()
         {

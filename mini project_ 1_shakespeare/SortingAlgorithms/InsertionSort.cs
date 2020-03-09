@@ -24,15 +24,11 @@ namespace mini_project__1_shakespeare
                 {
                     array[j + 1] = array[j];
                     j--;
-                
-
                 }
-
 
                 array[j + 1] = value;
 
             }
-
 
             return array;
 
