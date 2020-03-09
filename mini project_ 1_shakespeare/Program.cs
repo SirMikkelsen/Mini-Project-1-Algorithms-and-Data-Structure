@@ -107,7 +107,7 @@ namespace mini_project__1_shakespeare
         {
             try
             {
-                using (StreamReader sr = new StreamReader("../../../../text.txt"))
+                using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
                 {
 
                     while ((_line = sr.ReadLine()) != null)
