@@ -38,24 +38,27 @@ namespace mini_project__1_shakespeare
 
             Console.WriteLine(currentNode);
 
-            for (int i = 0; i < key.Length; i++)
-            {
-                char keyChar = key[i];
+            currentNode.addChild('t');
+            Console.WriteLine(currentNode.getChild('t'));
 
-                if (currentNode.getChild(keyChar).Equals(null))
-                {
-                    currentNode.addChild('t');
-                    Console.WriteLine(currentNode.getChild('t'));
-                }
 
-                // go to next node 
-                currentNode = currentNode.getChild(keyChar);
-            }
+            //for (int i = 0; i < key.Length; i++)
+            //{
+            //    char keyChar = key[i];
 
-            // Mark leaf (end of string) 
-            // and store index of 'str'  
-            // in index[] 
-            currentNode.addIndex(index);
+            //    if (currentNode.getChild(keyChar).Equals(null))
+            //    {
+
+            //    }
+
+            //   // go to next node
+            //      currentNode = currentNode.getChild(keyChar);
+            //}
+
+            //Mark leaf(end of string)
+            //     and store index of 'str'
+            // in index[]
+            //currentNode.addIndex(index);
         }
 
         public T[] traversePreorder(T[] array)
