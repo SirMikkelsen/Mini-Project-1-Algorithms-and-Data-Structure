@@ -35,7 +35,8 @@ namespace mini_project__1_shakespeare
         //        return array;
         //    }
 
-        public T[] sort(T[] array)
+        public T[] Sort(T[] array)
+       
         { // Sort a[] into increasing order.
             int N = array.Length;
             for (int i = 1; i < N; i++)
@@ -46,16 +47,13 @@ namespace mini_project__1_shakespeare
 
             return array;
         }
-
-
-        private static Boolean less(T v, T w)
+        
+        public static bool less(T v, T w)
         { return v.CompareTo(w) < 0; }
 
 
-        private static void exch(T[] a, int i, int j)
+        public static void exch(T[] a, int i, int j)
         { T t = a[i]; a[i] = a[j]; a[j] = t; }
 
     }
-
-
 }
