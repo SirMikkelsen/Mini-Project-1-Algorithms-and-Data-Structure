@@ -16,8 +16,7 @@ namespace mini_project__1_shakespeare
 
         public static List<string> _list = new List<string>();
         public static string _line;
-        public static int counter = 0;
-        // public static string _srline;
+      
 
         public static void Main(string[] args)
         {
@@ -50,6 +49,7 @@ namespace mini_project__1_shakespeare
                     {
                         Console.WriteLine(result2[i]);
                     }
+
                     break;
 
                 case "3":
