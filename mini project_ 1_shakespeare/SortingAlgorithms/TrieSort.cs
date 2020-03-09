@@ -27,6 +27,8 @@ namespace mini_project__1_shakespeare
         {
             // making a new path 
             // if not already 
+
+            Console.WriteLine(rootNode);
             if (rootNode == null)
             {
                 rootNode = new Node();
@@ -34,13 +36,16 @@ namespace mini_project__1_shakespeare
 
             Node currentNode = rootNode;
 
+            Console.WriteLine(currentNode);
+
             for (int i = 0; i < key.Length; i++)
             {
                 char keyChar = key[i];
 
-                if (currentNode.getChild(keyChar) == null)
+                if (currentNode.getChild(keyChar).Equals(null))
                 {
-                    currentNode.addChild(keyChar);
+                    currentNode.addChild('t');
+                    Console.WriteLine(currentNode.getChild('t'));
                 }
 
                 // go to next node 
@@ -53,7 +58,7 @@ namespace mini_project__1_shakespeare
             currentNode.addIndex(index);
         }
 
-        public T[] Sort(T[] array)
+        public T[] traversePreorder(T[] array)
         {
             traversePreorder(rootNode, array);
 

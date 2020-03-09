@@ -43,14 +43,14 @@ namespace mini_project__1_shakespeare
                     // Does not print words out in console
                     string[] _array2 = _list.ToArray();
                     string[] result2 = _insertionSort.Sort(_array2);
-                   
+
 
                     for (int i = 0; i < result2.Length; i++)
                     {
-                        
+
                         Console.WriteLine(result2[i]);
-           
-                    } 
+
+                    }
 
                     break;
 
@@ -83,30 +83,30 @@ namespace mini_project__1_shakespeare
                     // prints words out in console but not in alphabetical order
                     string[] _array5 = _list.ToArray();
 
-                    for(int i = 0; i < _array5.Length; i++)
+                    for (int i = 0; i < _array5.Length; i++)
                     {
-                        _trieSort.insert(_array5[i], i);
+                                   _trieSort.insert(_array5[i], i);
                     }
 
 
-                    foreach(var elements in _array5)
-                    {
-                        Console.WriteLine(elements);
-                    }
-                 
-
-                    string[] result5 = _trieSort.Sort(_array5);
-
-                     foreach(var elements in _array5)
+                    foreach (var elements in _array5)
                     {
                         Console.WriteLine(elements);
                     }
-                 
-                  
+
+
+                    string[] result5 = _trieSort.traversePreorder(_array5);
+
+                    //foreach (var elements in _array5)
+                    //{
+                    //    Console.WriteLine(elements);
+                    //}
+
+
                     //for (int i = 0; i < result5.Length; i++)
 
                     //{
-                      
+
                     //    Console.WriteLine(result5[i]);
                     //}
 
@@ -124,13 +124,13 @@ namespace mini_project__1_shakespeare
         {
             try
             {
-                using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
+                using (StreamReader sr = new StreamReader("../../../../test.txt"))
                 {
 
                     while ((_line = sr.ReadLine()) != null)
                     {
                         string[] split = _line.Split(" ");
-                        int i = 0;
+
 
                         char[] charsToTrim = { ',', '.', ';', ':' };
 
@@ -143,8 +143,6 @@ namespace mini_project__1_shakespeare
                                 _list.Add(cword);
 
                             }
-
-                            i++;
 
                         }
 

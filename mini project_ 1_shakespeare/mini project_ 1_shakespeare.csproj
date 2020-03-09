@@ -6,8 +6,4 @@
     <RootNamespace>mini_project__1_shakespeare</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Shakespeare\" />
-  </ItemGroup>
-
 </Project>
