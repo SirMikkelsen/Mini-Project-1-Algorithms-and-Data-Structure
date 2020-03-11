@@ -31,9 +31,6 @@ namespace mini_project__1_shakespeare
             switch (selction)
             {
                 case "1":
-
-
-                    
                     stopwatch.Start();
                     // is working
                     string[] _array = _list.ToArray();
@@ -53,7 +50,7 @@ namespace mini_project__1_shakespeare
                     ts.Milliseconds / 10);
                     Console.WriteLine("Heapsort " + elapsedTime);
                     stopwatch.Reset();
-                    
+
                     break;
                 case "2":
 
@@ -113,8 +110,8 @@ namespace mini_project__1_shakespeare
 
                     for (int i = 0; i < _array5.Length; i++)
                     {
-                                   _trieSort.insert(_array5[i], i);
-                                   Console.WriteLine(_array5[i]);
+                        _trieSort.insert(_array5[i], i);
+                        Console.WriteLine(_array5[i]);
                     }
 
 
@@ -123,8 +120,7 @@ namespace mini_project__1_shakespeare
                         Console.WriteLine(elements);
                     }
 
-
-                 //   string[] result5 = _trieSort.traversePreorder(_array5);
+                    //   string[] result5 = _trieSort.traversePreorder(_array5);
 
                     //foreach (var elements in _array5)
                     //{
@@ -133,7 +129,6 @@ namespace mini_project__1_shakespeare
 
 
                     //for (int i = 0; i < result5.Length; i++)
-
                     //{
 
                     //    Console.WriteLine(result5[i]);
