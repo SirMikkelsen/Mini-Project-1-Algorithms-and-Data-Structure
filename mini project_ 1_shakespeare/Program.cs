@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Diagnostics;
+using System.Threading;
 
 namespace mini_project__1_shakespeare
 {
@@ -17,26 +19,41 @@ namespace mini_project__1_shakespeare
         public static List<string> _list = new List<string>();
         public static string _line;
 
-
         public static void Main(string[] args)
         {
 
             Console.WriteLine("pres 1 to run HeapSort , 2 Insertionsort, 3 Mergesort, 4 SelectionSort, 5 Trie");
             string selction = Console.ReadLine();
             Readfile();
+            Stopwatch stopwatch = new Stopwatch();
+
 
             switch (selction)
             {
                 case "1":
 
+
+                    
+                    stopwatch.Start();
                     // is working
                     string[] _array = _list.ToArray();
                     string[] result1 = _heapSort.Sort(_array);
 
+                    stopwatch.Stop();
+
                     for (int i = 0; i < result1.Length; i++)
                     {
                         Console.WriteLine(result1[i]);
+
+
                     }
+
+                    TimeSpan ts = stopwatch.Elapsed;
+                    string elapsedTime = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds,
+                    ts.Milliseconds / 10);
+                    Console.WriteLine("Heapsort " + elapsedTime);
+                    stopwatch.Reset();
+                    
                     break;
                 case "2":
 
@@ -56,14 +73,23 @@ namespace mini_project__1_shakespeare
 
                 case "3":
 
+                    stopwatch.Start();
                     // is working
                     string[] _array3 = _list.ToArray();
                     string[] result3 = _mergeSort.Sort(_array3);
+                    stopwatch.Stop();
 
                     for (int i = 0; i < result3.Length; i++)
                     {
                         Console.WriteLine(result3[i]);
                     }
+
+                    TimeSpan ts1 = stopwatch.Elapsed;
+                    string elapsedTime1 = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts1.Hours, ts1.Minutes, ts1.Seconds,
+                    ts1.Milliseconds / 10);
+                    Console.WriteLine("MergeSort " + elapsedTime1);
+                    stopwatch.Reset();
+
 
                     break;
                 case "4":
@@ -80,7 +106,7 @@ namespace mini_project__1_shakespeare
                     break;
                 case "5":
 
-                    // prints words out in console but not in alphabetical order
+                    // / Does not print words out in console
                     string[] _array5 = _list.ToArray();
 
                     Console.WriteLine("arraycreatet");
