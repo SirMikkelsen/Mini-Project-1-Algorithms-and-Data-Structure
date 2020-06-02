@@ -53,10 +53,11 @@ namespace mini_project__1_shakespeare
 
                     break;
                 case "2":
-
+                    stopwatch.Start();
                     // Does not print words out in console
                     string[] _array2 = _list.ToArray();
                     string[] result2 = _insertionSort.Sort(_array2);
+                    stopwatch.Stop();
 
 
                     for (int i = 0; i < result2.Length; i++)
@@ -65,6 +66,12 @@ namespace mini_project__1_shakespeare
                         Console.WriteLine(result2[i]);
 
                     }
+
+                    TimeSpan tsInsert = stopwatch.Elapsed;
+                    string elapsedTimeInsert = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", tsInsert.Hours, tsInsert.Minutes, tsInsert.Seconds,
+                    tsInsert.Milliseconds / 10);
+                    Console.WriteLine("Insertion sort " + elapsedTimeInsert);
+                    stopwatch.Reset();
 
                     break;
 
@@ -90,35 +97,44 @@ namespace mini_project__1_shakespeare
 
                     break;
                 case "4":
-
+                    stopwatch.Start();
                     // Does not print words out in console
                     string[] _array4 = _list.ToArray();
                     string[] result4 = _selectionSort.Sort(_array4);
+                    stopwatch.Stop();
 
                     for (int i = 0; i < result4.Length; i++)
                     {
 
                         Console.WriteLine(result4[i]);
                     }
+
+                    TimeSpan tsSelect = stopwatch.Elapsed;
+                    string elapsedTimeSelect = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", tsSelect.Hours, tsSelect.Minutes, tsSelect.Seconds,
+                    tsSelect.Milliseconds / 10);
+                    Console.WriteLine("Selection sort " + elapsedTimeSelect);
+                    stopwatch.Reset();
+
                     break;
                 case "5":
 
                     // / Does not print words out in console
                     string[] _array5 = _list.ToArray();
 
-                    Console.WriteLine("arraycreatet");
+                    //Console.WriteLine("arraycreatet");
 
                     for (int i = 0; i < _array5.Length; i++)
                     {
                         _trieSort.insert(_array5[i], i);
-                        Console.WriteLine(_array5[i]);
+                        //Console.WriteLine(_array5[i]);
                     }
+                    Console.ReadLine();
+                    _trieSort.traversePreorder(_array5);
 
-
-                    foreach (var elements in _array5)
+                    /*foreach (var elements in _array5)
                     {
                         Console.WriteLine(elements);
-                    }
+                    }*/
 
                     //   string[] result5 = _trieSort.traversePreorder(_array5);
 
@@ -146,18 +162,23 @@ namespace mini_project__1_shakespeare
 
         public static void Readfile()
         {
-            try
+            _list.Add("we");
+            _list.Add("are");
+            _list.Add("software");
+            _list.Add("developers");
+            /*try
             {
                 using (StreamReader sr = new StreamReader("../../../../shakespeare.txt"))
                 {
-
-                    while ((_line = sr.ReadLine()) != null)
+                    int i = 0;
+                    while ((_line = sr.ReadLine()) != null && i < 2500)
                     {
+                        i++;
                         string[] split = _line.Split(" ");
 
 
                         char[] charsToTrim = { ',', '.', ';', ':' };
-
+                        
                         foreach (string word in split)
                         {
                             string cword = word.Trim(charsToTrim);
@@ -165,16 +186,12 @@ namespace mini_project__1_shakespeare
                             if (cword != null && word != "" && word != " ")
                             {
                                 _list.Add(cword);
-
                             }
-
                         }
-
                     }
                 }
-
             }
-            catch { }
+            catch { }*/
         }
     }
 }

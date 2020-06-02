@@ -6,7 +6,7 @@ namespace mini_project__1_shakespeare
 {
     /// <summary>
     ///  Algorithm founded on the net
-    /// </summary>
+    /// </summary> big o is O (n log n)
     /// <typeparam name="T"></typeparam>
     public class MergeSort<T> where T : IComparable
     {

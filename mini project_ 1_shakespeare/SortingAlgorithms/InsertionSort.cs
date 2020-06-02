@@ -6,6 +6,8 @@ namespace mini_project__1_shakespeare
 {
     /// <summary>
     ///  Algorithm founded on the net
+    /// time complexity of heap sort is О(n2)  
+    /// because it has a forloop and inner-loop which is J
     /// </summary>
     /// <typeparam name="T"></typeparam>
 
@@ -24,42 +26,14 @@ namespace mini_project__1_shakespeare
                 {
                     array[j + 1] = array[j];
                     j--;
-                    Console.WriteLine(array[i]);
+                 //   Console.WriteLine(array[i]);
 
                 }
 
-
                 array[j + 1] = value;
-
             }
 
-
             return array;
-
         }
-
-        //    public T[] Sort(T[] array)
-
-        //    { // Sort a[] into increasing order.
-        //        int N = array.Length;
-
-        //        for (int i = 1; i < N; i++)
-        //        { // Insert a[i] among a[i-1], a[i-2], a[i-3]... ..
-        //            for (int j = i; j > 0 && Less(array[j], array[j - 1]); j--)
-        //                Exch(array, j, j - 1);
-
-        //        }
-
-        //        return array;
-        //    }
-
-        //    public static bool Less(T v, T w)
-        //    { return v.CompareTo(w) < 0; }
-
-
-        //    public static void Exch(T[] a, int i, int j)
-        //    { T t = a[i]; a[i] = a[j]; a[j] = t; }
-
-        //}
     }
 }

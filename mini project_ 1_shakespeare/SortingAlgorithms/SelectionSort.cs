@@ -6,7 +6,7 @@ namespace mini_project__1_shakespeare
 {
     /// <summary>
     ///  Algorithm founded on the net
-    /// </summary>
+    /// </summary> big o is О(n2) 
     /// <typeparam name="T"></typeparam>
     public class SelectionSort<T> where T : IComparable
     {

@@ -8,6 +8,8 @@ namespace mini_project__1_shakespeare
 
     /// <summary>
     /// Algorithm founded on the net
+    /// 
+    ///  time complexity of heap sort is O(N*LogN)
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class HeapSort<T> where T : IComparable
@@ -98,16 +100,6 @@ namespace mini_project__1_shakespeare
         {
             return 2 * (parentPos + 1);
         }
-
-        //public static void printArray(T[] array)
-        //{
-
-        //	foreach (T t in array)
-        //	{
-        //		Console.Write(' ' + t.ToString() + ' ');
-        //	}
-
-        //}
     }
 
 }
